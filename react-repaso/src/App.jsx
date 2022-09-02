@@ -9,7 +9,7 @@ function App() {
       <Title />
       <Title texto = 'Este tiene textoooo'/>
 
-      <Contador />
+      <Contador numInicial="100"/>
       <Contador/>
     </div>
   )

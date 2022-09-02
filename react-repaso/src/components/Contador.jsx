@@ -2,8 +2,8 @@ import React from 'react'
 import Title from './Title'
 import { useState } from 'react'
 
-export const Contador = (/*{numInicial = 1}*/) => {
-    const [contador, setContador] = useState(0/*numInicial*/);
+export const Contador = ({ numInicial = 0}) => {
+    const [contador, setContador] = useState(parseInt(numInicial));
     const [contador2, setContador2] = useState(0);
   return (
     <>
