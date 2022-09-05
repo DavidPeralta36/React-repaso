@@ -5,6 +5,8 @@ import { useState } from 'react'
 export const Contador = ({ numInicial = 0}) => {
     const [contador, setContador] = useState(parseInt(numInicial));
     const [contador2, setContador2] = useState(0);
+
+    //prueba commit escuela
   return (
     <>
         <div className ='bg-primary rounded-5 p-3 text-center text-light mt-2 '>
