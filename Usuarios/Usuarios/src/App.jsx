@@ -10,9 +10,14 @@ function App() {
 
   return (
     <>
-      <Usuariolocal/>
-      <UserPromesa/>
-      <Usuariofetch/>
+      {
+        /*
+           <Usuariolocal/>
+           <UserPromesa/>
+           <Usuariofetch/>
+        */
+      }
+      
       <UsuarioAsyncAwait/>
     </>
   )

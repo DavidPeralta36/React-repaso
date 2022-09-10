@@ -1,5 +1,6 @@
 import React from 'react'
 import { useEffect, useState } from "react";
+import { ListaUsuarios } from './ListaUsuarios';
 
 const urlAPI ='https://randomuser.me/api/?results=3';
 const dataInicial= {
@@ -24,18 +25,26 @@ export const UsuarioAsyncAwait = () => {
     },[])
   return (
     <div>
-      <h2>Usuarios por AsyncAwait</h2>
-      
+      <h2>Usuarios por AsyncAwait por modulos</h2>
       {
-        dtusr.results.map(usuario=>
-            (
-              <div key={usuario.login.uuid} usuario={usuario}>
-                  <img src={usuario.picture.medium} />
-                  <div>
-                    <p>{usuario.name.first}{usuario.name.last}</p>
-                  </div>
-              </div> 
-            ))
+      //se le pasa el contesto a la lista del dtusr
+      }
+      <ListaUsuarios dtusr={dtusr}/>
+      {
+        /*
+        {
+        //map para recorrer el objeto recibido de helpers
+        //dentro de los parentecis se pinta el resultado del recorrido
+        dtusr.results.map(usuario => (
+            <div key={usuario.login.uuid} usuario={usuario}>
+                <img src={usuario.picture.medium} />
+                <div>
+                  <p>{usuario.name.first}{usuario.name.last}</p>
+                </div>
+            </div>
+        ))
+        }
+        */
       }
 
     </div>

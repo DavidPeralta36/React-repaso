@@ -1,6 +1,7 @@
 import React from 'react'
 import { useEffect, useState } from "react";
 
+//declaracion de constantes como el url y el objeto inicial
 const url = 'https://randomuser.me/api/?results=3';
 const initdt = {
   results: [],
@@ -9,13 +10,16 @@ const initdt = {
 
 
 export const Usuariofetch = () => {
-const [dtusr, setdtusr] = useState(initdt)
 
+  //set valor del objeto inicial en el dtusr
+const [dtusr, setdtusr] = useState(initdt)
+//obtener los datos y pasarlo a un tpo de dato legible
 const getUsuario = ()=>
 {
     fetch(url).then(resultado => resultado.json().then(resultado=> setdtusr(resultado)))
 }
 
+//Ejecutar el get
 useEffect(()=> 
 {
     getUsuario()

@@ -1,6 +1,6 @@
 //importaciones
 import React from 'react'
-import Listausuarios from './Listausuarios'
+
 import { dtusr } from '../helpers/User'
 
 
