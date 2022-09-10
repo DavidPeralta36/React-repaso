@@ -1,15 +1,29 @@
-//importaciones
 import React from 'react'
-import Listausuarios from './Listausuarios'
-import { dtusr } from '../helpers/User'
+import { useEffect, useState } from "react";
+
+const url = 'https://randomuser.me/api/?results=3';
+const initdt = {
+  results: [],
+  info: {}
+}
 
 
+export const Usuariofetch = () => {
+const [dtusr, setdtusr] = useState(initdt)
 
-const Usuariolocal = () => {
-//no hay ningun proceso antes del return
+const getUsuario = ()=>
+{
+    fetch(url).then(resultado => resultado.json().then(resultado=> setdtusr(resultado)))
+}
+
+useEffect(()=> 
+{
+    getUsuario()
+},[])
+
   return (
     <div>
-      <h2>Usuarios locales</h2>
+      <h2>Usuarios por fetch</h2>
       
       {
         //map para recorrer el objeto recibido de helpers
@@ -27,5 +41,3 @@ const Usuariolocal = () => {
     </div>
   )
 }
-
-export default Usuariolocal
