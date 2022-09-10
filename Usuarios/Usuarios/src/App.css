@@ -40,3 +40,6 @@
     font-size: 1.1em;
   }
   
+  .suspendido{
+    opacity: .5;
+  }
